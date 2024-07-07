@@ -1,0 +1,586 @@
+/* general css */
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata);
+@import url(https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata);
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    /* background color */
+    --bg-white: #ffffff;
+    --banner-black: #112627;
+    --bg-dark-color: #03262c;
+
+    /* text-color */
+    --primary-text: #061738;
+    --secondary-text: #60cd12;
+    --light-color: #e2f6de;
+    --dark-color: #03262c;
+    --text-white: #fff;
+    --text-gray: #dee2e6;
+    --anchor-color: #007aff;
+
+    /* font family */
+    --primary-font: 'Barlow Condensed', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+
+}
+
+body,
+html {
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 9rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+h2 {
+    color: var(--primary-text);
+    font-size: 4.7rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--text-white);
+    font-size: 3.1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--primary-text);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--primary-text);
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+}
+
+embed,
+iframe,
+img,
+object {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button {
+    text-decoration: none;
+    outline: 0;
+}
+
+li a {
+    color: var(--text-white);
+}
+
+a:hover,
+button:hover {
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    color: var(--bg-white);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-text);
+}
+
+.main-btn {
+    position: relative;
+    color: var(--bg-white);
+    background: linear-gradient(to right, #0f7404, #5cb917);
+    z-index: 1;
+    overflow: hidden;
+    border: 0.1rem solid var(--bg-white);
+    border-radius: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem 3.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2rem;
+
+}
+
+.main-btn:hover {
+    background: var(--bg-white);
+    color: var(--secondary-text);
+    border: 0.2rem solid var(--secondary-text);
+}
+
+section {
+    padding: 5rem 0;
+
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+}
+
+.section-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.about .banner_section,
+.product .banner_section,
+.gallery .banner_section,
+.contact .banner_section {
+    background: url(/assets/images/pexels-ella-olsson-572949-1640777.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    min-height: auto;
+}
+
+/* 01 navbar css */
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+}
+
+.header .navbar {
+    background: var(--dark-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem 5rem;
+}
+
+.header .navbar-brand {
+    width: 10rem;
+    margin-top: -o.1rem;
+
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0 0.2rem;
+    font-family: var(--primary-font);
+}
+
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link .active {
+    color: var(--secondary-text);
+}
+
+.header .navbar-toggler {
+    color: var(--text-white);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+
+}
+
+.header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header .header_right span {
+    color: var(--secondary-text);
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+
+}
+
+.header .header_right .phone_no {
+    color: var(--text-white);
+    font-size: 1.6rem;
+}
+
+.header-scrolled {
+    position: fixed;
+    top: -0.4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1320px;
+    z-index: 999;
+    margin: auto;
+    transition: 0.3s all ease-in-out;
+}
+
+
+
+
+
+/* 02 banner section */
+.banner_section {
+    background: url(assets/images/pexels-ella-olsson-572949-1640777.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 90vh;
+}
+
+.banner_section .carousel-item {
+    padding: 3rem 0;
+    height: 90vh;
+}
+
+.banner_section .carousel-caption {
+    top: 30%;
+    left: 3%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.banner_section .carousel-caption h3 {
+    background: var(--dark-color);
+    padding: 0.5rem 1.5rem;
+    display: inline;
+}
+
+.banner_section .carousel-caption p {
+    margin-bottom: 2rem;
+    max-width: 40rem;
+}
+
+/* 03 features css */
+.feature_section .features-box {
+    background-color: transparent;
+    border: 0.15rem solid var(--light-color);
+    padding: 8rem 0;
+    transition: all 0.3s;
+}
+
+.feature_section .features-icon-border {
+    background-color: transparent;
+    padding: 1.3rem;
+    border: 0.3rem solid var(--light-color);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.feature_section .features-box .features-icon {
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature_section .features-box .features-icon img {
+    width: 3.7rem;
+}
+
+.feature_section .features-box h3 {
+    margin-top: 1.5rem;
+    color: var(--primary-text);
+}
+
+.feature_section .features-box:hover {
+    background-color: var(--bg-dark-color);
+    border-color: var(--bg-dark-color);
+}
+
+.feature_section .features-box:hover h3 {
+    color: var(--light-color);
+}
+
+.feature_section .features-box:hover .features-icon-border {
+    border-color: var(--secondary-text);
+}
+
+/* 04 about section */
+.landing_about_section {
+    background: url(assets/images/pexels-ella-olsson-572949-1640777.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 9rem 0;
+    background-repeat: no-repeat;
+}
+
+.landing_about_section p {
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+}
+
+/* 05 product card desighn */
+.landing_product_section .product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0.2rem solid var(--light-color);
+    padding: 2rem 1rem;
+    transition: all 0.3s;
+
+}
+
+.landing_product_section .product-card .product-img {
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+.landing_product_section .product-card h3 {
+    color: var(--primary-text);
+}
+
+.landing_product_section .product-card span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    margin-right: 0.5rem;
+    text-decoration: line-through;
+    transition: all 0.3s;
+
+}
+
+.landing_product_section .product-card .product-detail {
+    position: absolute;
+    bottom: -22rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--dark-color);
+    transition: all 0.5s ease;
+}
+
+.landing_product_section .product-card:hover .product-detail {
+    bottom: 0;
+}
+
+/* 06 testimonial  */
+.testimonial_section {
+    background-color: var(--light-color);
+    padding: 8rem;
+}
+
+.testimonial_section .carousel-indicators {
+    bottom: -6rem;
+}
+
+.testimonial_section .carousel-indicators button {
+    background-color: var(--dark-color);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+.testimonial_section .card {
+    background: linear-gradient(to top left, rgb(11, 42, 11), green);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: right;
+    padding: 5rem 5rem 5rem 0;
+    border-radius: 0 .5rem .5rem 0;
+    border: 0.1rem solid transparent;
+}
+
+.testimonial_section .profile-box {
+    background-color: var(--dark-color);
+    padding: 1.875rem;
+    border: .5rem 0 0 .5rem;
+}
+
+.testimonial_section .profile-box img {
+    border-radius: .625rem 3, 543rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial_section .desc-box {
+    padding: 2.5rem;
+}
+
+/* 07 gallery css */
+.gallery_section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* footer css */
+.footer_wrapper {
+    background: var(--bg-dark-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 15rem;
+    padding-bottom: 0;
+}
+
+.footer_wrapper h5 {
+    color: var(--light-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer_wrapper ul li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+.footer_wrapper .company_details {
+    font-size: 1.4rem;
+
+}
+
+.footer_wrapper .contact-info li a {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+}
+
+.footer_wrapper .link-widget li a,
+.footer_wrapper p {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; 
+}
+.footer_wrapper .link-widget li a:before{
+    content: \f105;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.footer_wrapper .link-widget li a:hover{
+    margin-left: 0.625rem;
+    color: var(--secondary-text);
+
+}
+.footer_wrapper .social-network a{
+     width: 3.5rem;
+     height: 3.5rem;
+     line-height: 3.2rem;
+     margin: 0.5rem;
+     display: inline-block;
+     border: 0.125rem solid var(--text-gray);
+     color: var(--text-gray);
+     text-align: center;
+     border-radius: 100%;
+     font-size: 1.25rem;
+     -webkit-transition: all 0.3s cubic-bezier(0.625, 0.045, 0.355, 1);
+     transition: all 0.3s cubic-bezier(0.625, 0.045, 0.355, 1);
+}
+.footer_wrapper .social-network a:hover{
+    background-color: var(--secondary-text);
+    border-color: var(--secondary-text);
+    color: var(--light-color);
+    box-shadow: 0 0.625rem 0.9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.1875rem);
+}
+.footer_wrapper .form-control{
+    font-size: 2rem;
+    color: var(--light-color);
+
+}
+.footer_wrapper .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-text);
+}
+.footer_wrapper .copyright-section{
+    background-color: var(--secondary-text);
+    text-align: center;
+    margin-top: 5rem;
+}
+.footer_wrapper .copyright-section p{
+    padding: 3rem;
+    margin-top: 0;
+    line-height: 0;
+}
+.footer_wrapper .copyright-section a{
+    color: var(--primary-text);
+    font-weight: 600;
+}
+/* end */
