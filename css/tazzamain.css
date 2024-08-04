@@ -290,7 +290,7 @@ section {
 
 /* 02 banner section */
 .banner_section {
-    background: url(assets/images/pexels-ella-olsson-572949-1640777.jpg);
+    background: url(/assets/images/pexels-ella-olsson-572949-1640777.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -373,7 +373,7 @@ section {
 
 /* 04 about section */
 .landing_about_section {
-    background: url(assets/images/pexels-ella-olsson-572949-1640777.jpg);
+    background: url(/assets/images/pexels-ella-olsson-572949-1640777.jpg);
     background-position: center center;
     background-size: cover;
     padding: 9rem 0;
